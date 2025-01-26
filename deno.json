@@ -8,7 +8,8 @@
     "build": "deno run -A dev.ts build",
     "preview": "deno run -A main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update .",
-    "fetch-logos": "deno run --allow-net --allow-read --allow-write --allow-env scripts/fetch_tmdb_logos.ts"
+    "fetch-logos": "deno run --allow-net --allow-read --allow-write --allow-env scripts/fetch_tmdb_logos.ts",
+    "fetch-ombi": "deno run --allow-net --allow-read --allow-env scripts/fetch_ombi_requests.ts"
   },
   "lint": {
     "rules": {
