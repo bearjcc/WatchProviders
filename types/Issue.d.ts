@@ -1,4 +1,4 @@
-import { ISODateTimeString } from "./ISODateString.d.ts";
+import { ISODateTimeString } from "./ISODateTimeString.d.ts";
 import { OmbiUser } from "./User.d.ts";
 
 export interface Issue {

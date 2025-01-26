@@ -1,4 +1,4 @@
-import { ISODateTimeString } from "./ISODateString.d.ts";
+import { ISODateTimeString } from "./ISODateTimeString.d.ts";
 
 export interface OmbiUser {
   alias: string;
