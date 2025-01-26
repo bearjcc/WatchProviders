@@ -1,4 +1,4 @@
-import { TDateISOTimeStamp } from "./ISODateString.d.ts";
+import { ISODateTimeString } from "./ISODateString.d.ts";
 import { OmbiUser } from "./User.d.ts";
 
 export interface Issue {
@@ -14,8 +14,8 @@ export interface Issue {
     id: number;
   };
   status: number;
-  resolvedDate?: TDateISOTimeStamp;
-  createdDate: TDateISOTimeStamp;
+  resolvedDate?: ISODateTimeString;
+  createdDate: ISODateTimeString;
   userReportedId: string;
   userReported: OmbiUser;
   comments?: IssueComment[];
@@ -27,7 +27,7 @@ export interface IssueComment {
   userId: string;
   comment: string;
   issuesId: number;
-  date: TDateISOTimeStamp;
+  date: ISODateTimeString;
   issues: string;
   user: OmbiUser;
   id: number;

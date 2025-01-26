@@ -1,4 +1,4 @@
-import { TDateISOTimeStamp } from "./ISODateString.d.ts";
+import { ISODateTimeString } from "./ISODateString.d.ts";
 import { Issue } from "./Issue.d.ts";
 import { OmbiUser } from "./User.d.ts";
 

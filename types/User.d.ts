@@ -1,10 +1,10 @@
-import { TDateISOTimeStamp } from "./ISODateString.d.ts";
+import { ISODateTimeString } from "./ISODateString.d.ts";
 
 export interface OmbiUser {
   alias: string;
   userType: number;
   providerUserId: string;
-  lastLoggedIn?: TDateISOTimeStamp;
+  lastLoggedIn?: ISODateTimeString;
   language?: string;
   streamingCountry?: string;
   movieRequestLimit: number;
@@ -30,7 +30,7 @@ export interface OmbiUser {
   phoneNumber?: string;
   phoneNumberConfirmed: boolean;
   twoFactorEnabled: boolean;
-  lockoutEnd?: TDateISOTimeStamp;
+  lockoutEnd?: ISODateTimeString;
   lockoutEnabled: boolean;
   accessFailedCount: number;
 }
@@ -38,7 +38,7 @@ export interface OmbiUser {
 export interface NotificationUserId {
   playerId: string;
   userId: string;
-  addedAt?: TDateISOTimeStamp;
+  addedAt?: ISODateTimeString;
   user: string;
   id: number;
 }
