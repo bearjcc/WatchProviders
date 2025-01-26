@@ -2,7 +2,7 @@ import { load } from "jsr:@std/dotenv"
 import { ensureDir } from "jsr:@std/fs"
 
 // Load environment variables
-const env = await load({ envPath: ".env.local" });
+const env = await load({ envPath: ".env" });
 const API_KEY = env["TMDB_API_KEY"];
 if (!API_KEY) {
   console.error("API key is missing. Ensure TMDB_API_KEY is set in .env.local.");
