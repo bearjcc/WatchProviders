@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect x="0" y="0" width="200" height="200" rx="20" fill="#2A2A2A"/>
+    
+    <!-- Play button shape -->
+    <g transform="translate(50, 50)" fill="#808080">
+        <!-- Play button triangle -->
+        <path d="M0,0 L100,50 L0,100 Z"/>
+    </g>
+
+    <!-- X overlay -->
+    <g transform="translate(100, 100)" stroke="#B0B0B0" stroke-width="6">
+        <!-- First line of X (top-left to bottom-right) -->
+        <line x1="-70" y1="-70" x2="70" y2="70"/>
+        <!-- Second line of X (top-right to bottom-left) -->
+        <line x1="70" y1="-70" x2="-70" y2="70"/>
+    </g>
+</svg> 
