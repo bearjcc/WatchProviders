@@ -9,7 +9,9 @@
     "preview": "deno run -A main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update .",
     "fetch-logos": "deno run --allow-net --allow-read --allow-write --allow-env scripts/fetch_tmdb_logos.ts",
-    "fetch-ombi": "deno run --allow-net --allow-read --allow-env scripts/fetch_ombi_requests.ts"
+    "fetch-ombi": "deno run --allow-net --allow-read --allow-env scripts/fetch_ombi_requests.ts",
+    "fetch-movies": "deno run --allow-net --allow-read --allow-env scripts/fetch_ombi_requests.ts movies",
+    "fetch-tv": "deno run --allow-net --allow-read --allow-env scripts/fetch_ombi_requests.ts tv"
   },
   "lint": {
     "rules": {
@@ -28,7 +30,8 @@
     "preact/": "https://esm.sh/preact@10.22.0/",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
-    "$std/": "https://deno.land/std@0.216.0/"
+    "$std/": "https://deno.land/std@0.216.0/",
+    "dotenv": "https://deno.land/x/dotenv@v3.2.2/mod.ts"
   },
   "compilerOptions": {
     "jsx": "react-jsx",

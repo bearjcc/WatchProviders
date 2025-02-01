@@ -24,7 +24,7 @@ export interface BaseRequest {
   requestedUser?: OmbiUser;
   source: number;
   canApprove: boolean;
-  streamingProviders?: string[];
+  mediaProviders?: string[];
 }
 
 export interface MovieRequest extends BaseRequest {
