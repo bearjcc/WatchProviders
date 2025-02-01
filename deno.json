@@ -9,9 +9,15 @@
     "preview": "deno run -A main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update .",
     "fetch-logos": "deno run --allow-net --allow-read --allow-write --allow-env scripts/fetch_tmdb_logos.ts",
-    "fetch-ombi": "deno run --allow-net --allow-read --allow-env scripts/fetch_ombi_requests.ts",
-    "fetch-movies": "deno run --allow-net --allow-read --allow-env scripts/fetch_ombi_requests.ts movies",
-    "fetch-tv": "deno run --allow-net --allow-read --allow-env scripts/fetch_ombi_requests.ts tv"
+    "fetch-ombi-movies": "deno run --allow-net --allow-read --allow-env scripts/fetch_ombi_requests.ts --movies",
+    "fetch-ombi-tv": "deno run --allow-net --allow-read --allow-env scripts/fetch_ombi_requests.ts --tv",
+    "update-movie-providers": "deno run --allow-net --allow-read --allow-env scripts/update_request_providers.ts --movies",
+    "update-tv-providers": "deno run --allow-net --allow-read --allow-env scripts/update_request_providers.ts --tv",
+    "list-provider": "deno run --allow-net --allow-read --allow-env scripts/list_by_provider.ts",
+    "list-all-providers": "deno run --allow-net --allow-read --allow-env scripts/list_by_provider.ts --all",
+    "list-provider-episodes": "deno run --allow-net --allow-read --allow-env scripts/list_by_provider.ts --episodes",
+    "clear-cache": "deno run --allow-net --allow-read --allow-write --allow-env scripts/manage_cache.ts --clear",
+    "refresh-cache": "deno run --allow-net --allow-read --allow-write --allow-env scripts/manage_cache.ts --refresh"
   },
   "lint": {
     "rules": {

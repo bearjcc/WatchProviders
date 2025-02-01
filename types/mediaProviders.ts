@@ -41,6 +41,47 @@ export class MediaProvider {
       params.streamFabModulePurchased
     );
   }
+
+  // Initialize provider name to MediaProvider mapping
+  private static providerMap: Map<string, MediaProvider> | null = null;
+
+  private static initializeProviderMap(): void {
+    if (this.providerMap !== null) return;
+    
+    this.providerMap = new Map();
+    for (const provider of providers) {
+      // Map the streamFabModule name
+      this.providerMap.set(provider.streamFabModule.toLowerCase(), provider);
+      
+      // Map all aliases
+      for (const alias of provider.aliases) {
+        this.providerMap.set(alias.toLowerCase(), provider);
+      }
+    }
+  }
+
+  static fromTMDBProviders(tmdbProviders: { provider_name: string; logo_path: string }[]): MediaProvider[] {
+    this.initializeProviderMap();
+    const uniqueProviders = new Set<MediaProvider>();
+    
+    for (const tmdbProvider of tmdbProviders) {
+      const provider = this.providerMap?.get(tmdbProvider.provider_name.toLowerCase());
+      if (provider) {
+        uniqueProviders.add(provider);
+      } else {
+        // If no matching provider found, create a new one with Unavailable module
+        uniqueProviders.add(
+          new MediaProvider(
+            "Unavailable",
+            `https://image.tmdb.org/t/p/original${tmdbProvider.logo_path}`,
+            [tmdbProvider.provider_name]
+          )
+        );
+      }
+    }
+    
+    return Array.from(uniqueProviders);
+  }
 }
 
 export const providers: MediaProvider[] = [
